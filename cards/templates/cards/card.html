@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <article>
-    <h4>{{card.question}}</h4>
-    <p>{{card.answer}}</p>
-    <a href="{% url 'card-update' card.id %}" role="button">
+    <h4 style="color:aliceblue">{{card.question}}</h4>
+    <p style="color:aliceblue">{{card.answer}}</p>
+    <a style="background-color:rgba(216, 230, 21, 0.973); color:rgb(10, 10, 10)" href="{% url 'card-update' card.id %}" role="button">
         ✏️ Edit Card
     </a>
 </article>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% extends 'cards/base.html' %}
 
 {% block content %}
@@ -5,16 +6,16 @@
     <h2> 
         All cards   
     </h2>
-    <a href="{% url 'card-create' %}" role="button">
+    <a style="color:aliceblue" href="{% url 'card-create' %}" role="button">
         ✨ Create New Card
     </a>
     {% for card in card_list %}
         {% ifchanged %}
-            <h3> {{card.box | ordinal}}  Box</h3>
+            <h3 style="color:aliceblue"> {{card.box | ordinal}}  Box</h3>
         {% endifchanged %}
-        <article>
+        <article style="color:aliceblue">
             {{ card }}
-        </article>
+        </article >
         {% include 'cards/card.html'%}
     {% endfor %}
 {% endblock %}
